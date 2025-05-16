@@ -1,0 +1,15 @@
+CREATE DATABASE test
+USE test
+CREATE TABLE student (id INT, name TEXT, age INT)
+INSERT INTO student (id, name, age) VALUES (23301001, 'BaoZhengduo', 20)
+INSERT INTO student (id, name, age) VALUES (23301002, 'CaoYan', 21)
+INSERT INTO student (id, name, age) VALUES (23301004, 'HuangGuangjing', 20)
+SELECT * FROM student
+SELECT id, name FROM student where age = 21
+UPDATE student SET age = 23 WHERE name = 'BaoZhengduo'
+DELETE FROM student WHERE name = 'HuangGuangjing'
+ALTER TABLE student ADD COLUMN email TEXT
+ALTER TABLE student MODIFY COLUMN age TEXT
+ALTER TABLE student DROP COLUMN email
+DROP TABLE student
+DROP DATABASE test
